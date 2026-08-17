@@ -1,0 +1,17 @@
+target/
+build/
+.idea/
+*.iml
+.nb-gradle/
+nbproject/private/
+.classpath
+.project
+.settings/
+*.log
+.DS_Store
+Thumbs.db
+src/main/resources/db.local.properties
+src/main/resources/db.properties
+*.war
+.vscode/
+
