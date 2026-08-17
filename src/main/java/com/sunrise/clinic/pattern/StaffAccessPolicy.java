@@ -1,0 +1,27 @@
+package com.sunrise.clinic.pattern;
+
+import com.sunrise.clinic.model.AdminUser;
+import com.sunrise.clinic.model.StaffUser;
+
+/**
+ * Strategy interface. Admin and reception should not see the same menu,
+ * so each role has its own policy class.
+ */
+public interface StaffAccessPolicy {
+    boolean canRegisterAppointments();
+
+    boolean canSearchAppointments();
+
+    boolean canCreateBills();
+
+    boolean canViewReports();
+
+    boolean canManageStaff();
+
+    static StaffAccessPolicy forUser(StaffUser user) {
+        if (user instanceof AdminUser || (user != null && "ADMIN".equalsIgnoreCase(user.getRole()))) {
+            return new AdminAccessPolicy();
+        }
+        return new ReceptionAccessPolicy();
+    }
+}
