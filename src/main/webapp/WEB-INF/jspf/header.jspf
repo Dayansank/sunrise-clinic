@@ -1,0 +1,51 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sunrise Dental Clinic</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+</head>
+<body class="app-body">
+<div class="util-bar no-print">
+    <div>
+        <span>Staff desk</span>
+        <span>Hotline <strong>+94 11 234 5678</strong></span>
+    </div>
+    <div>12 Galle Road, Colombo 03</div>
+</div>
+<header class="topbar no-print">
+    <a class="brand" href="${pageContext.request.contextPath}/menu.jsp">
+        <span class="brand-mark">S</span>
+        <div>
+            <strong>Sunrise Dental Clinic</strong>
+            <small>${sessionScope.staffUser.role == 'ADMIN' ? 'Admin portal' : 'Reception desk'}</small>
+        </div>
+    </a>
+    <nav class="nav">
+        <a href="${pageContext.request.contextPath}/menu.jsp">Menu</a>
+        <c:if test="${sessionScope.staffUser.role != 'ADMIN'}">
+            <a href="${pageContext.request.contextPath}/appointment">Register</a>
+        </c:if>
+        <a href="${pageContext.request.contextPath}/search">Display</a>
+        <c:if test="${sessionScope.staffUser.role != 'ADMIN'}">
+            <a href="${pageContext.request.contextPath}/bill">Bill</a>
+        </c:if>
+        <c:if test="${sessionScope.staffUser.role == 'ADMIN'}">
+            <a href="${pageContext.request.contextPath}/reports">Reports</a>
+            <a href="${pageContext.request.contextPath}/staff">Staff</a>
+            <a href="${pageContext.request.contextPath}/catalog">Catalogue</a>
+        </c:if>
+        <a href="${pageContext.request.contextPath}/help">Help</a>
+        <a class="danger" href="${pageContext.request.contextPath}/logout">Exit</a>
+    </nav>
+    <div class="who">
+        <c:if test="${not empty sessionScope.staffUser}">
+            <span>${sessionScope.staffUser.fullName}</span>
+            <em>${sessionScope.staffUser.role}</em>
+        </c:if>
+    </div>
+</header>
+<main class="page">
