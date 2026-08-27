@@ -1,0 +1,79 @@
+@startuml Sunrise_Use_Case
+title Use Case Diagram - Sunrise Dental Clinic
+
+left to right direction
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+
+actor "Reception staff" as Rec
+actor "Clinic admin" as Adm
+actor "Patient" as Pat
+
+rectangle "Sunrise Dental Clinic system" {
+  usecase "UC1 Log in" as UC1
+  usecase "UC2 Register appointment" as UC2
+  usecase "UC3 Search appointment" as UC3
+  usecase "UC4 Calculate bill" as UC4
+  usecase "UC5 View help" as UC5
+  usecase "UC6 Exit / log out" as UC6
+  usecase "UC7 View reports" as UC7
+  usecase "UC8 Manage staff accounts" as UC8
+  usecase "UC9 Update dentists and fees" as UC9
+  usecase "UC10 Book own appointment" as UC10
+  usecase "Validate patient details" as V
+  usecase "Check dentist slot is free" as S
+  usecase "Find appointment by number" as F
+  usecase "Print bill" as P
+  usecase "Show QR ticket" as Q
+  usecase "Send booking notification" as N
+  usecase "Filter reports by date" as D
+}
+
+Rec --> UC1
+Rec --> UC2
+Rec --> UC3
+Rec --> UC4
+Rec --> UC5
+Rec --> UC6
+
+Adm --> UC1
+Adm --> UC3
+Adm --> UC5
+Adm --> UC6
+Adm --> UC7
+Adm --> UC8
+Adm --> UC9
+
+Pat --> UC1
+Pat --> UC5
+Pat --> UC6
+Pat --> UC10
+
+' INCLUDE = always part of the base use case
+UC2 ..> V : <<include>>
+UC2 ..> S : <<include>>
+UC10 ..> V : <<include>>
+UC10 ..> S : <<include>>
+UC4 ..> F : <<include>>
+UC2 ..> N : <<include>>
+UC10 ..> N : <<include>>
+
+' EXTEND = optional or only in some cases
+P .> UC4 : <<extend>>
+Q .> UC3 : <<extend>>
+D .> UC7 : <<extend>>
+
+note bottom of V
+  Include: a booking is never
+  saved until name, address,
+  phone, date and time pass.
+end note
+
+note bottom of P
+  Extend: the bill can be
+  shown without printing.
+  Print is extra (browser Ctrl+P).
+end note
+
+@enduml

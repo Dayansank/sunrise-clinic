@@ -1,0 +1,29 @@
+@startuml Sunrise_Sequence_Logout
+title Sequence Diagram - UC6 Exit / log out
+
+actor "Staff or patient" as A
+participant "header link" as UI
+participant "LogoutServlet" as S
+participant "HttpSession" as SES
+participant "index.jsp" as HOME
+
+A -> UI : click Exit
+UI -> S : GET /logout
+activate S
+S -> SES : getSession(false)
+alt session exists
+  S -> SES : invalidate()
+  SES --> S : session cleared
+else no session
+  S -> S : nothing to clear
+end
+S --> HOME : redirect home page
+deactivate S
+HOME --> A : public site, not logged in
+
+note over A, HOME
+  This is the "exit" on a website.
+  The next person at the desk cannot
+  use the previous login.
+end note
+@enduml

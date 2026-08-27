@@ -1,0 +1,54 @@
+@startuml Sunrise_Sequence_Booking
+title Sequence Diagram - Register a new appointment (reception)
+
+actor "Reception staff" as Rec
+participant "AppointmentServlet" as S
+participant "AppointmentService" as AS
+participant "StaffBookingProcess\n(Template Method)" as T
+participant "BookingValidationChain" as V
+participant "AppointmentDAO" as DAO
+database "MySQL" as DB
+participant "NotificationService\n(Observer)" as N
+
+Rec -> S : submit name, address, phone,\ndentist, treatment, date, time
+activate S
+S -> AS : register(...)
+activate AS
+AS -> DAO : insert new patient
+DAO -> DB : INSERT patients
+DB --> DAO : patient id
+DAO --> AS : patient saved
+
+AS -> T : book(patient, dentist, treatment, date, time)
+activate T
+T -> V : validate fields
+V --> T : ok / error
+
+T -> DAO : isSlotTaken(dentist, date, time)
+DAO -> DB : SELECT appointments
+DB --> DAO : free or taken
+DAO --> T : slot free
+
+T -> DAO : nextAppointmentNumber()
+DAO --> T : SCN-0007
+T -> DAO : insert appointment
+DAO -> DB : INSERT appointments
+DB --> DAO : saved
+DAO --> T : appointment
+
+T -> N : onBooked(appointment)
+N -> DB : INSERT notifications (email + SMS)
+N --> T
+T --> AS : appointment
+deactivate T
+AS --> S : appointment
+deactivate AS
+S --> Rec : show appointment number
+deactivate S
+
+note over Rec, DB
+  I used the same steps for patient online booking.
+  Only createdBy / bookedBy is different.
+end note
+
+@enduml

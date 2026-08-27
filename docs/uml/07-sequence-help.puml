@@ -1,0 +1,31 @@
+@startuml Sunrise_Sequence_Help
+title Sequence Diagram - UC5 View help
+
+actor "Staff" as A
+participant "menu.jsp" as M
+participant "HelpServlet" as S
+participant "HelpService" as SV
+participant "help.jsp" as UI
+
+A -> M : click Help
+M -> S : GET /help
+activate S
+S -> S : read staffUser from session
+S -> SV : steps(staff)
+activate SV
+alt role is ADMIN
+  SV --> S : adminSteps()
+else role is RECEPTION
+  SV --> S : receptionSteps()
+end
+deactivate SV
+S --> UI : forward help.jsp
+deactivate S
+UI --> A : numbered guide for that role
+
+note over A, UI
+  AuthFilter sends a guest to login first.
+  Help text is required so a new person
+  on the desk does not need a paper manual.
+end note
+@enduml

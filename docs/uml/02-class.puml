@@ -1,0 +1,121 @@
+@startuml Sunrise_Class
+title Class Diagram - Sunrise Dental Clinic
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam classFontStyle plain
+hide circle
+skinparam class {
+  BackgroundColor #FFFFFF
+  BorderColor #222222
+  HeaderBackgroundColor #D9E2F3
+}
+
+abstract class Person {
+  - name : String
+  - contactNumber : String
+}
+
+abstract class ClinicUser {
+  - active : boolean
+  + getDisplayName() : String
+}
+
+class Patient {
+  - patientId : int
+  - address : String
+  - email : String
+}
+
+class StaffUser {
+  - userId : int
+  - username : String
+  - role : String
+}
+
+class AdminUser {
+  + canManageStaff() : boolean
+}
+
+class ReceptionUser {
+  + canWorkFrontDesk() : boolean
+}
+
+class Dentist {
+  - dentistId : int
+  - name : String
+  - specialization : String
+}
+
+class Treatment {
+  - treatmentId : int
+  - typeName : String
+  - cost : BigDecimal
+}
+
+class Appointment {
+  - appointmentId : int
+  - appointmentNumber : String
+  - appointmentDate : LocalDate
+  - appointmentTime : LocalTime
+  - status : String
+  - bookedBy : String
+  + cloneForRebook() : Appointment
+}
+
+class Bill {
+  - billId : int
+  - consultationFee : BigDecimal
+  - treatmentCost : BigDecimal
+  - totalAmount : BigDecimal
+  - billedAt : LocalDateTime
+}
+
+class AppointmentService {
+  + register(...) : Appointment
+  + findByNumber(...) : Appointment
+}
+
+class BillingService {
+  + createBill(...) : Bill
+  + calculateTotal(...) : BigDecimal
+}
+
+class DBConnection <<Singleton>> {
+  - INSTANCE : DBConnection
+  + getInstance() : DBConnection
+  + getConnection() : Connection
+}
+
+Person <|-- ClinicUser
+ClinicUser <|-- Patient
+ClinicUser <|-- StaffUser
+StaffUser <|-- AdminUser
+StaffUser <|-- ReceptionUser
+
+Patient "1" -- "0..*" Appointment : books
+Dentist "1" -- "0..*" Appointment : assigned to
+Treatment "1" -- "0..*" Appointment : for
+Appointment "1" -- "0..1" Bill : billed as
+StaffUser "1" -- "0..*" Appointment : created by
+
+AppointmentService ..> Appointment
+AppointmentService ..> Patient
+BillingService ..> Bill
+BillingService ..> Appointment
+AppointmentService ..> DBConnection
+BillingService ..> DBConnection
+
+note right of Person
+  Multilevel inheritance I used:
+  Person -> ClinicUser -> StaffUser -> AdminUser
+end note
+
+note bottom of Bill
+  Assumption: consultation fee is read
+  from clinic_settings, not hardcoded.
+  Total = treatment cost + consultation fee.
+end note
+
+@enduml
