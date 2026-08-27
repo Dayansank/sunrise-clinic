@@ -1,0 +1,47 @@
+@startuml Sunrise_Sequence_Login
+title Sequence Diagram - UC1 Log in (staff)
+
+actor "Staff\n(reception or admin)" as A
+participant "login.jsp" as UI
+participant "LoginServlet" as S
+participant "AuthService" as SV
+participant "UserDAO" as DAO
+database "MySQL\nstaff_users" as DB
+
+A -> UI : enter username and password
+A -> S : POST /login
+activate S
+S -> SV : login(username, password)
+activate SV
+
+alt blank username or password
+  SV --> S : ClinicException
+  S --> UI : show error, stay on login
+else password hash does not match
+  SV -> DAO : findPasswordHash()
+  DAO -> DB : SELECT password_hash
+  DB --> DAO : hash or null
+  SV --> S : ClinicException "Invalid username or password"
+  S --> UI : show error
+else account inactive
+  SV -> DAO : findByUsername()
+  DAO -> DB : SELECT user
+  SV --> S : ClinicException "not active"
+  S --> UI : show error
+else success
+  SV -> DAO : findPasswordHash + findByUsername
+  DAO -> DB : SELECT
+  DB --> DAO : staff row
+  DAO --> SV : StaffUser (ADMIN or RECEPTION)
+  SV --> S : StaffUser
+  S -> S : session.setAttribute("staffUser")
+  S --> UI : redirect menu.jsp
+end
+deactivate SV
+deactivate S
+
+note over A, DB
+  Alternative: MySQL down -> LoginServlet shows
+  "Cannot connect to the database."
+end note
+@enduml

@@ -1,0 +1,39 @@
+@startuml Sunrise_Sequence_Search
+title Sequence Diagram - UC3 Search appointment
+
+actor "Reception or admin" as A
+participant "search.jsp" as UI
+participant "SearchServlet" as S
+participant "AppointmentService" as SV
+participant "AppointmentDAO" as DAO
+database "MySQL" as DB
+
+A -> UI : type appointment number
+A -> S : POST /search
+activate S
+S -> SV : findByNumber(number)
+activate SV
+
+alt number is blank
+  SV --> S : ClinicException
+  S --> UI : "Appointment number is required"
+else number not in database
+  SV -> DAO : findByNumber()
+  DAO -> DB : SELECT join patient, dentist, treatment
+  DB --> DAO : empty
+  SV --> S : ClinicException "No appointment found"
+  S --> UI : not found message
+else found
+  SV -> DAO : findByNumber()
+  DAO -> DB : SELECT
+  DB --> DAO : appointment
+  DAO --> SV : Appointment
+  SV --> S : Appointment
+  S --> UI : show details
+  opt QR ticket (extend)
+    UI -> UI : request /qr?number=APT-2026-0001
+  end
+end
+deactivate SV
+deactivate S
+@enduml
