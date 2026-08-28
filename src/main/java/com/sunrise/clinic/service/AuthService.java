@@ -6,9 +6,6 @@ import com.sunrise.clinic.model.StaffUser;
 import com.sunrise.clinic.util.PasswordUtil;
 import com.sunrise.clinic.util.ValidationUtil;
 
-/**
- * Checks staff username and password. Passwords are stored as SHA-256 with a salt.
- */
 public class AuthService {
     private final UserDAO userDAO;
 

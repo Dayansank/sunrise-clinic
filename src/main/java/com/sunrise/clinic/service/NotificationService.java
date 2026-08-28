@@ -6,10 +6,6 @@ import com.sunrise.clinic.pattern.ClinicNotificationFactory;
 import com.sunrise.clinic.pattern.NotificationChannel;
 import com.sunrise.clinic.pattern.NotificationFactory;
 
-/**
- * Observer implementation. After a booking I log an email and an SMS row
- * (real SMS gateway is not used in this coursework).
- */
 public class NotificationService implements AppointmentObserver {
     private final NotificationChannel emailChannel;
     private final NotificationChannel smsChannel;

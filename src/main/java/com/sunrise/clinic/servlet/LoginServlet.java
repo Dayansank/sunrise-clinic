@@ -12,10 +12,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-/**
- * Staff login. If the username/password are correct we keep the user in session
- * for 30 minutes, then send them to the menu.
- */
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
     private final AuthService authService = new AuthService();

@@ -13,9 +13,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/**
- * Reception walk-in form. Only reception can open this (RoleGuard).
- */
 @WebServlet("/appointment")
 public class AppointmentServlet extends HttpServlet {
     private final AppointmentService appointmentService = new AppointmentService();

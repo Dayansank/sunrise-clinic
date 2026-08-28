@@ -1,29 +1,23 @@
-# Sunrise Dental Clinic
+# sunrise clinic
 
-CIS6003 Advanced Programming coursework. This is a Java web system for a private dental clinic in Colombo.
+CIS6003 coursework. Appointment system for Sunrise Dental Clinic, Colombo.
 
-I built it with JSP + Servlets (Jakarta), MySQL and Tomcat 10. Patients can book online. Reception handles walk-in visits and bills. Admin looks after reports, staff accounts and the clinic catalogue.
+JSP, Servlets, MySQL, Tomcat 10.
 
-## How to run it
+## how to run
 
 1. JDK 17
-2. MySQL 8 — import `database/sunrise_clinic.sql`
-3. Copy `src/main/resources/db.properties` and set your MySQL user/password
+2. import `database/sunrise_clinic.sql` in MySQL
+3. set user/password in `src/main/resources/db.properties`
 4. `mvn package`
-5. Deploy `target/sunrise-clinic.war` to Tomcat 10
-6. Open http://localhost:8080/sunrise-clinic
+5. put `target/sunrise-clinic.war` in Tomcat 10
+6. open http://localhost:8080/sunrise-clinic
 
-## Logins I used for testing
+## logins
 
-- Admin: `admin` / `Admin@123`
-- Reception: `reception` / `Staff@123`
-- Demo patient: `kamal@sunrise.lk` / `Patient@123`
+- admin / Admin@123
+- reception / Staff@123
+- patient: kamal@sunrise.lk / Patient@123
 
-## What is in the project
-
-- 3-tier: JSP → Servlets/services → MySQL DAOs
-- REST under `/api/`
-- Design patterns in the Java code (Singleton, Factory, Builder, Strategy, Observer, and more)
-- JUnit tests and GitHub Actions (`mvn test`)
-
-Admin and reception do **not** share the same menu. If I change dentists or the consultation fee in MySQL (or on the admin catalogue page), the website shows it after refresh.
+reception does walk-in booking, search and bills.
+admin does reports, staff accounts and the catalogue.

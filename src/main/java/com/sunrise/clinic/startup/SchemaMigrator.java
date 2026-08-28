@@ -40,7 +40,7 @@ public final class SchemaMigrator {
                 try {
                     statement.execute(sql);
                 } catch (Exception ignored) {
-                    // Column/table may already exist on later startups.
+                    // already there
                 }
             }
         } catch (Exception e) {

@@ -18,10 +18,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Business logic for bookings. Servlets should not talk to the DAO directly,
- * so this class sits in the middle (3-tier).
- */
 public class AppointmentService {
     private final AppointmentDAO appointmentDAO;
     private final PatientDAO patientDAO;

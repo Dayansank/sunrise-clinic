@@ -7,10 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- * I used Singleton so the whole project shares one MySQL setup.
- * Username and password are read from db.properties (not hard-coded here).
- */
+// one mysql setup for the whole app
 public final class DBConnection {
     private static final DBConnection INSTANCE = new DBConnection();
     private final String url;
@@ -38,7 +35,6 @@ public final class DBConnection {
     }
 
     public Connection getConnection() throws SQLException {
-        // New connection each time so we always see the latest rows from MySQL.
         return DriverManager.getConnection(url, username, password);
     }
 }

@@ -15,10 +15,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-/**
- * Security filter for every URL. Guests can only open the public pages.
- * Patients stay in the patient area. Staff are split: reception desk vs admin office.
- */
 @WebFilter("/*")
 public class AuthFilter implements Filter {
 

@@ -1,9 +1,5 @@
 package com.sunrise.clinic.pattern;
 
-/**
- * Admin policy. Reports, staff accounts and catalogue are allowed.
- * Walk-in register and printing bills stay with reception.
- */
 public class AdminAccessPolicy implements StaffAccessPolicy {
     @Override
     public boolean canRegisterAppointments() {

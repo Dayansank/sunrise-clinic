@@ -9,9 +9,6 @@ import com.sunrise.clinic.util.ValidationUtil;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Create / delete admin and reception logins. Last admin cannot be removed.
- */
 public class StaffService {
     private final UserDAO userDAO;
 
