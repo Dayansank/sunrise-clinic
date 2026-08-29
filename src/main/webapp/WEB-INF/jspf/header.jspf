@@ -21,7 +21,7 @@
         <span class="brand-mark">S</span>
         <div>
             <strong>Sunrise Dental Clinic</strong>
-            <small>${sessionScope.staffUser.role == 'ADMIN' ? 'Admin portal' : 'Reception desk'}</small>
+            <small>Reception desk</small>
         </div>
     </a>
     <nav class="nav">
@@ -32,11 +32,6 @@
         <a href="${pageContext.request.contextPath}/search">Display</a>
         <c:if test="${sessionScope.staffUser.role != 'ADMIN'}">
             <a href="${pageContext.request.contextPath}/bill">Bill</a>
-        </c:if>
-        <c:if test="${sessionScope.staffUser.role == 'ADMIN'}">
-            <a href="${pageContext.request.contextPath}/reports">Reports</a>
-            <a href="${pageContext.request.contextPath}/staff">Staff</a>
-            <a href="${pageContext.request.contextPath}/catalog">Catalogue</a>
         </c:if>
         <a href="${pageContext.request.contextPath}/help">Help</a>
         <a class="danger" href="${pageContext.request.contextPath}/logout">Exit</a>

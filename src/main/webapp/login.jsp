@@ -5,17 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Staff login · Sunrise Dental Clinic</title>
+    <title>Staff login</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body class="login-body">
-<%@ include file="/WEB-INF/jspf/public-header.jspf" %>
 <div class="login-wrap">
 <div class="login-shell">
     <section class="login-hero">
-        <p class="eyebrow">Staff portal</p>
-        <h1>Channel the front desk</h1>
-        <p>Reception registers walk-in visits and prints bills. Admin opens reports and looks up records.</p>
+        <p class="eyebrow">Staff</p>
+        <h1>Sunrise Dental Clinic</h1>
+        <p>Reception books walk-ins and prints bills.</p>
     </section>
     <section class="login-card">
         <h2>Staff login</h2>
@@ -29,11 +28,9 @@
             </label>
             <button type="submit" class="btn orange">Sign in</button>
         </form>
-        <p class="hint">admin / Admin@123 · reports only<br>reception / Staff@123 · walk-in desk and bills</p>
-        <p class="hint"><a href="${pageContext.request.contextPath}/index.jsp">Back to Dental Unit</a></p>
+        <p class="hint">reception / Staff@123<br>admin / Admin@123</p>
     </section>
 </div>
 </div>
-<%@ include file="/WEB-INF/jspf/public-footer.jspf" %>
 </body>
 </html>
