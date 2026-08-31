@@ -37,6 +37,6 @@ I left GitHub branches for work I might add after the assignment:
 - `feature/future-card-payment` — pay the bill by card
 - `feature/future-reminders` — remind the patient before the visit
 - `feature/future-report-pdf` — download reports as PDF
-- `feature/future-dentist-leave` — block a dentist on leave days
+- `feature/future-dentist-leave` — block a dentist who is on leave
 - `feature/future-treatment-notes` — dentist notes on a visit
 
