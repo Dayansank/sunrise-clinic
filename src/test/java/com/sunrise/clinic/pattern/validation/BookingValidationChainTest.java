@@ -18,6 +18,18 @@ class BookingValidationChainTest {
     }
 
     @Test
+    void rejectsShortPhone() {
+        LocalDate date = LocalDate.now().plusDays(1);
+        if (date.getDayOfWeek().getValue() == 7) {
+            date = date.plusDays(1);
+        }
+        LocalDate finalDate = date;
+        assertThrows(ClinicException.class, () -> BookingValidationChain.validate(
+                "Kamal Perera", "12 Galle Road, Colombo", "07712", "1", "2",
+                finalDate.toString(), "10:30"));
+    }
+
+    @Test
     void acceptsValidBookingData() {
         LocalDate date = LocalDate.now().plusDays(1);
         if (date.getDayOfWeek().getValue() == 7) {

@@ -12,9 +12,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/**
- * Admin adds/deletes staff. This is only reachable if canManageStaff() is true.
- */
 @WebServlet("/staff")
 public class StaffServlet extends HttpServlet {
     private final StaffService staffService = new StaffService();

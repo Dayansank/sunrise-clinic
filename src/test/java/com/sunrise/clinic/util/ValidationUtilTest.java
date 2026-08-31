@@ -31,7 +31,9 @@ class ValidationUtilTest {
         );
         assertFalse(errors.isEmpty());
         assertTrue(errors.stream().anyMatch(e -> e.toLowerCase().contains("name")));
-        assertTrue(errors.stream().anyMatch(e -> e.toLowerCase().contains("past") || e.toLowerCase().contains("time") || e.toLowerCase().contains("dentist")));
+        assertTrue(errors.stream().anyMatch(e -> e.toLowerCase().contains("past")
+                || e.toLowerCase().contains("time")
+                || e.toLowerCase().contains("dentist")));
     }
 
     @Test

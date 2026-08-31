@@ -20,6 +20,13 @@ class AuthServiceTest {
     private UserDAO userDAO;
 
     @Test
+    void rejectsBlankUsernameOrPassword() {
+        AuthService service = new AuthService(userDAO);
+        assertThrows(ClinicException.class, () -> service.login("", "Admin@123"));
+        assertThrows(ClinicException.class, () -> service.login("admin", ""));
+    }
+
+    @Test
     void rejectsWrongPassword() {
         when(userDAO.findPasswordHash("admin")).thenReturn(PasswordUtil.hash("Admin@123"));
         AuthService service = new AuthService(userDAO);

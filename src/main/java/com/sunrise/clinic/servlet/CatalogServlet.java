@@ -11,10 +11,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/**
- * Admin catalogue. Dentists, treatments and the consultation fee live in MySQL,
- * so a change here shows on the booking screens after refresh.
- */
 @WebServlet("/catalog")
 public class CatalogServlet extends HttpServlet {
     private final CatalogService catalogService = new CatalogService();

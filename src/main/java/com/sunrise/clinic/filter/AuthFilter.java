@@ -40,6 +40,15 @@ public class AuthFilter implements Filter {
         StaffUser staff = session == null ? null : (StaffUser) session.getAttribute("staffUser");
         Patient patient = session == null ? null : (Patient) session.getAttribute("patientUser");
 
+        if (path.equals("/logout")) {
+            if (staff == null && patient == null) {
+                httpResponse.sendRedirect(http.getContextPath() + "/index.jsp");
+                return;
+            }
+            chain.doFilter(request, response);
+            return;
+        }
+
         if (path.startsWith("/qr")) {
             if (staff == null && patient == null) {
                 httpResponse.sendRedirect(http.getContextPath() + "/patient-login");

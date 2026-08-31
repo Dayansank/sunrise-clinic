@@ -24,6 +24,19 @@ I built it with JSP + Servlets (Jakarta), MySQL and Tomcat 10. Patients can book
 - 3-tier: JSP → Servlets/services → MySQL DAOs
 - REST under `/api/`
 - Design patterns in the Java code (Singleton, Factory, Builder, Strategy, Observer, and more)
-- JUnit tests and GitHub Actions (`mvn test`)
+- JUnit tests (`mvn test`)
 
 Admin and reception do **not** share the same menu. If I change dentists or the consultation fee in MySQL (or on the admin catalogue page), the website shows it after refresh.
+
+## Later extras (empty branches, not built yet)
+
+I left GitHub branches for work I might add after the assignment:
+
+- `feature/future-sms-email` — real SMS/email, not only a log
+- `feature/future-password-reset` — forgot password
+- `feature/future-card-payment` — pay the bill by card
+- `feature/future-reminders` — remind the patient before the visit
+- `feature/future-report-pdf` — download reports as PDF
+- `feature/future-dentist-leave` — block a dentist on leave days
+- `feature/future-treatment-notes` — dentist notes on a visit
+

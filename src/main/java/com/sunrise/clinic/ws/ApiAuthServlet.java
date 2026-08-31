@@ -14,9 +14,6 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Map;
 
-/**
- * REST login for Postman / the distributed web-service part of the assignment.
- */
 @WebServlet("/api/auth/login")
 public class ApiAuthServlet extends HttpServlet {
     private final AuthService authService = new AuthService();
