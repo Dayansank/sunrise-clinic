@@ -27,6 +27,7 @@ class HelpServiceTest {
         List<String> steps = new HelpService().steps(admin);
         String all = String.join(" ", steps).toLowerCase();
         assertTrue(all.contains("reception"));
+        assertTrue(all.contains("reports"));
         assertTrue(all.contains("exit"));
     }
 }

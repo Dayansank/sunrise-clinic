@@ -33,6 +33,7 @@ public class HelpService {
     private List<String> adminSteps() {
         return List.of(
                 "Login as admin.",
+                "Open Reports for the doughnut, bar and line charts.",
                 "You can look up an appointment number on Display.",
                 "Walk-in register and bills are for reception.",
                 "Click Exit when you are done."

@@ -13,9 +13,14 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(false);
+        boolean patient = session != null && session.getAttribute("patientUser") != null;
         if (session != null) {
             session.invalidate();
         }
-        response.sendRedirect(request.getContextPath() + "/login.jsp");
+        if (patient) {
+            response.sendRedirect(request.getContextPath() + "/patient-login");
+        } else {
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
+        }
     }
 }

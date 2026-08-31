@@ -3,9 +3,9 @@
 <%@ include file="/WEB-INF/jspf/header.jspf" %>
 <section class="hero-panel">
     <div>
-        <p class="eyebrow">Reception desk</p>
+        <p class="eyebrow">${sessionScope.staffUser.role == 'ADMIN' ? 'Admin' : 'Reception desk'}</p>
         <h1>Good day, ${sessionScope.staffUser.fullName}</h1>
-        <p>Walk-in booking, search, bill, help and exit.</p>
+        <p>${sessionScope.staffUser.role == 'ADMIN' ? 'Reports and appointment lookup.' : 'Walk-in booking, search, bill, help and exit.'}</p>
     </div>
 </section>
 <section class="menu-grid">
@@ -26,6 +26,13 @@
             <span>03</span>
             <h3>Calculate and Print Bill</h3>
             <p>Treatment cost plus consultation fee.</p>
+        </a>
+    </c:if>
+    <c:if test="${sessionScope.staffUser.role == 'ADMIN'}">
+        <a class="menu-card" href="${pageContext.request.contextPath}/reports">
+            <span>01</span>
+            <h3>Reports</h3>
+            <p>Charts and todays appointments.</p>
         </a>
     </c:if>
     <a class="menu-card" href="${pageContext.request.contextPath}/help">

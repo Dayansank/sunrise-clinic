@@ -15,9 +15,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 
-/**
- * Patient books a slot. Live times come from /api/slots so two people cannot take the same chair.
- */
 @WebServlet("/patient-book")
 public class PatientBookServlet extends HttpServlet {
     private final AppointmentService appointmentService = new AppointmentService();

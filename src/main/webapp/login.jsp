@@ -29,6 +29,7 @@
             <button type="submit" class="btn orange">Sign in</button>
         </form>
         <p class="hint">reception / Staff@123<br>admin / Admin@123</p>
+        <p class="hint"><a href="${pageContext.request.contextPath}/patient-login">Patient portal</a></p>
     </section>
 </div>
 </div>
