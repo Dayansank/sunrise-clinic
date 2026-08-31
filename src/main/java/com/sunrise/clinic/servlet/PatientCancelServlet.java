@@ -11,9 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-/**
- * Patient cancel. I wrap the work in CancelAppointmentCommand (Command pattern).
- */
+/** Patient cancels a booked visit. */
 @WebServlet("/patient-cancel")
 public class PatientCancelServlet extends HttpServlet {
     private final AppointmentService appointmentService = new AppointmentService();

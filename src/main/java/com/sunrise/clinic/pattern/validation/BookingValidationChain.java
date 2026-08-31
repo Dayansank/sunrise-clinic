@@ -1,8 +1,6 @@
 package com.sunrise.clinic.pattern.validation;
 
-/**
- * Starts the validation chain in a fixed order so every booking is checked the same way.
- */
+/** Runs the booking checks in a fixed order. */
 public final class BookingValidationChain {
     private BookingValidationChain() {
     }

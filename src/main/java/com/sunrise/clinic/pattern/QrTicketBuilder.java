@@ -2,10 +2,7 @@ package com.sunrise.clinic.pattern;
 
 import com.sunrise.clinic.model.Appointment;
 
-/**
- * Builder for the QR ticket text. I chain the methods so the string is built
- * step by step instead of concatenating a messy block in the servlet.
- */
+/** Builds the text that goes into the QR ticket. */
 public class QrTicketBuilder {
     private String appointmentNumber = "";
     private String patientName = "";

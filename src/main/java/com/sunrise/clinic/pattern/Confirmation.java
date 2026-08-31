@@ -1,8 +1,6 @@
 package com.sunrise.clinic.pattern;
 
-/**
- * Decorator. Basic confirmation is just text; the QR decorator wraps it and adds a code.
- */
+/** Booking confirmation text. QR version adds the code. */
 public interface Confirmation {
     String message();
 

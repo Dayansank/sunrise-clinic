@@ -3,10 +3,7 @@ package com.sunrise.clinic.model;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-/**
- * I used Prototype here. When a patient clicks "Book again", we copy the dentist
- * and treatment from the old visit instead of typing everything again.
- */
+/** One booked visit. Book-again copies the dentist and treatment. */
 public class Appointment {
     private int appointmentId;
     private String appointmentNumber;

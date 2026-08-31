@@ -11,10 +11,7 @@ import com.sunrise.clinic.util.ValidationUtil;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * Dentists, treatments and consultation fee. All of this is stored in MySQL,
- * not hard-coded in JSP.
- */
+/** Dentists, treatments and the fee from MySQL. */
 public class CatalogService {
     private final DentistDAO dentistDAO;
     private final TreatmentDAO treatmentDAO;

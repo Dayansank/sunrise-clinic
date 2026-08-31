@@ -1,8 +1,6 @@
 package com.sunrise.clinic.pattern;
 
-/**
- * Command pattern. Cancel is wrapped as one action so the servlet stays small.
- */
+/** One action, used for cancel. */
 public interface ClinicCommand {
     void execute();
 }

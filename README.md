@@ -21,9 +21,8 @@ I built it with JSP + Servlets (Jakarta), MySQL and Tomcat 10. Patients can book
 
 ## What is in the project
 
-- 3-tier: JSP → Servlets/services → MySQL DAOs
+- JSP → servlets/services → MySQL
 - REST under `/api/`
-- Design patterns in the Java code (Singleton, Factory, Builder, Strategy, Observer, and more)
 - JUnit tests (`mvn test`)
 
 Admin and reception do **not** share the same menu. If I change dentists or the consultation fee in MySQL (or on the admin catalogue page), the website shows it after refresh.

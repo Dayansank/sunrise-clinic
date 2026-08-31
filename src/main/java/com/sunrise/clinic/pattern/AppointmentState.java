@@ -1,9 +1,6 @@
 package com.sunrise.clinic.pattern;
 
-/**
- * State pattern. A cancelled visit should not be billed, and a completed visit
- * should not be cancelled again. Each status answers those questions itself.
- */
+/** BOOKED / COMPLETED / CANCELLED. Completed visits cannot be cancelled. */
 public enum AppointmentState {
     BOOKED {
         @Override

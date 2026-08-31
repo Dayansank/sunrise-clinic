@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""CIS6003 WRIT1 full report ~5000 words. Lecturer extras included."""
+"""Build the CIS6003 Word report."""
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor, Inches
 from pathlib import Path
@@ -226,7 +226,7 @@ def main():
     bullet(doc, "Commit: clinic catalogue reads from mysql so website shows db changes")
     bullet(doc, "Commit: homepage ui with slider and the clinic look")
     bullet(doc, "Commit: junit tests and a short readme on how to run it")
-    P(doc, "Table 1 is the same plan in one place. Every commit maps to a real file in the repo. There is no day for \"AI chatbot\" or \"inventory of toothpaste\".")
+    P(doc, "Table 1 is the same plan in one place. Every commit maps to a real file in the repo. I did not add extras that are not part of this clinic.")
 
     table(doc, ["Day", "Branch", "What I finish", "Then I merge"], [
         ["1", "feature/foundation", "WAR, SQL, model inheritance", "main"],
@@ -445,7 +445,7 @@ def main():
     bullet(doc, "Dentist leave dates, still using Check dentist slot.")
     bullet(doc, "Short treatment notes on the appointment, still searched by APT number.")
     bullet(doc, "Keep GitHub Actions green on every push of main after day 5.")
-    P(doc, "I did not list a mobile game, an AI chatbot, or a stock system for toothpaste. Those would break the consistency rule. If a future feature cannot point back to an actor or a table I already have, I will not put it on a slide.")
+    P(doc, "I did not add extras that are not part of this clinic. If a future feature cannot point back to an actor or a table I already have, I will not put it on a slide.")
 
     # 9 FAQ
     H(doc, "9  Frequently asked questions")

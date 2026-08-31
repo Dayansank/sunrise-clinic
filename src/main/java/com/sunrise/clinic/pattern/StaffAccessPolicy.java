@@ -3,10 +3,7 @@ package com.sunrise.clinic.pattern;
 import com.sunrise.clinic.model.AdminUser;
 import com.sunrise.clinic.model.StaffUser;
 
-/**
- * Strategy interface. Admin and reception should not see the same menu,
- * so each role has its own policy class.
- */
+/** What each staff role is allowed to do. */
 public interface StaffAccessPolicy {
     boolean canRegisterAppointments();
 

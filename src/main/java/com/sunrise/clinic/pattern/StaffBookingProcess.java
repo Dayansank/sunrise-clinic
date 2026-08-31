@@ -4,9 +4,7 @@ import com.sunrise.clinic.dao.AppointmentDAO;
 import com.sunrise.clinic.dao.DentistDAO;
 import com.sunrise.clinic.dao.TreatmentDAO;
 
-/**
- * Walk-in booking from reception. created_by is the logged-in staff id.
- */
+/** Walk-in booking. created_by is the staff member at the desk. */
 public class StaffBookingProcess extends BookingTemplate {
     private final int staffId;
 

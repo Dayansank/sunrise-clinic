@@ -1,9 +1,6 @@
 package com.sunrise.clinic.exception;
 
-/**
- * Simple exception for clinic rules (double booking, bad login, missing appointment).
- * I used a runtime exception so servlets can catch it and show a friendly message.
- */
+/** Thrown for clinic rules like double booking or a bad login. */
 public class ClinicException extends RuntimeException {
     public ClinicException(String message) {
         super(message);

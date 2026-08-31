@@ -1,8 +1,6 @@
 package com.sunrise.clinic.pattern;
 
-/**
- * Abstract Factory. One factory gives me both email and SMS channels together.
- */
+/** Gives both the email and SMS senders. */
 public interface NotificationFactory {
     NotificationChannel createEmailChannel();
 

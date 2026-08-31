@@ -7,10 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- * I used Singleton so the whole project shares one MySQL setup.
- * Username and password are read from db.properties (not hard-coded here).
- */
+/** One MySQL setup for the whole app. Login details come from db.properties. */
 public final class DBConnection {
     private static final DBConnection INSTANCE = new DBConnection();
     private final String url;

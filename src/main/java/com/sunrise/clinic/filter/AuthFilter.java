@@ -15,10 +15,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-/**
- * Security filter for every URL. Guests can only open the public pages.
- * Patients stay in the patient area. Staff are split: reception desk vs admin office.
- */
+/** Stops guests opening staff/patient pages. Reception and admin are not the same. */
 @WebFilter("/*")
 public class AuthFilter implements Filter {
 
@@ -90,10 +87,6 @@ public class AuthFilter implements Filter {
         }
         if (isAdminOffice(path) && !access.canViewReports() && !access.canManageStaff()) {
             forbid(http, httpResponse, path, "Admin only.");
-            return;
-        }
-        if (path.startsWith("/patterns")) {
-            httpResponse.sendRedirect(http.getContextPath() + "/menu.jsp");
             return;
         }
         chain.doFilter(request, response);

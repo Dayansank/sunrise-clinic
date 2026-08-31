@@ -4,9 +4,7 @@ import com.sunrise.clinic.dao.AppointmentDAO;
 import com.sunrise.clinic.dao.DentistDAO;
 import com.sunrise.clinic.dao.TreatmentDAO;
 
-/**
- * Patient self-booking. created_by is null/0 because no staff member typed this in.
- */
+/** Online booking. No staff id because the patient booked it themselves. */
 public class PatientBookingProcess extends BookingTemplate {
     public PatientBookingProcess(AppointmentDAO appointmentDAO, DentistDAO dentistDAO, TreatmentDAO treatmentDAO) {
         super(appointmentDAO, dentistDAO, treatmentDAO);

@@ -2,10 +2,7 @@ package com.sunrise.clinic.pattern.validation;
 
 import com.sunrise.clinic.exception.ClinicException;
 
-/**
- * Chain of Responsibility. Name, address, phone, date and time are checked
- * one after another. If one step fails, we stop and show that error.
- */
+/** Name, phone, date and time checked one after another. */
 public abstract class ValidationHandler {
     private ValidationHandler next;
 

@@ -10,10 +10,7 @@ import com.sunrise.clinic.pattern.QrTicketBuilder;
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
 
-/**
- * Facade + Singleton. ZXing has a lot of extra classes; the rest of the app
- * only calls dataUri() or pngBytes() here.
- */
+/** Turns appointment text into a QR PNG. */
 public class QrCodeService {
     private static final QrCodeService INSTANCE = new QrCodeService();
 

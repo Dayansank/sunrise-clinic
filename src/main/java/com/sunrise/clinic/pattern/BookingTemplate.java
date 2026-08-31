@@ -16,10 +16,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Template Method. Staff walk-in booking and patient online booking follow the
- * same steps (validate → check slot → save → notify). Only createdBy / bookedBy change.
- */
+/** Shared booking steps: validate, check slot, save, notify. */
 public abstract class BookingTemplate {
     protected final AppointmentDAO appointmentDAO;
     protected final DentistDAO dentistDAO;

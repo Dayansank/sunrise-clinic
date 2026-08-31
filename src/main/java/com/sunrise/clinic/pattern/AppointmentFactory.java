@@ -8,10 +8,7 @@ import com.sunrise.clinic.model.Treatment;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-/**
- * Factory method. I did not want servlets to set 8 appointment fields by hand,
- * so this class builds a BOOKED appointment in one place.
- */
+/** Builds a BOOKED appointment in one place. */
 public final class AppointmentFactory {
     private AppointmentFactory() {
     }
