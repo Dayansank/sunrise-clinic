@@ -16,6 +16,10 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Template Method. Staff walk-in booking and patient online booking follow the
+ * same steps (validate → check slot → save → notify). Only createdBy / bookedBy change.
+ */
 public abstract class BookingTemplate {
     protected final AppointmentDAO appointmentDAO;
     protected final DentistDAO dentistDAO;
@@ -34,6 +38,7 @@ public abstract class BookingTemplate {
 
     public final Appointment book(Patient patient, String dentistIdText, String treatmentIdText,
                                   String dateText, String timeText) {
+        // Same order every time so I don't miss a check.
         validate(patient, dentistIdText, treatmentIdText, dateText, timeText);
         Dentist dentist = dentistDAO.findById(Integer.parseInt(dentistIdText));
         Treatment treatment = treatmentDAO.findById(Integer.parseInt(treatmentIdText));

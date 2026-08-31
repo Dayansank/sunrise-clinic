@@ -1,6 +1,9 @@
 package com.sunrise.clinic.model;
 
-// base class for staff + patients
+/**
+ * Person is the first class in my inheritance chain.
+ * Everyone in the clinic (staff and patients) has a name and a phone number.
+ */
 public abstract class Person {
     private String name;
     private String contactNumber;

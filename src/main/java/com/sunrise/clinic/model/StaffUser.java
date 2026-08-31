@@ -1,5 +1,9 @@
 package com.sunrise.clinic.model;
 
+/**
+ * Staff login account. Person → ClinicUser → StaffUser.
+ * Role is either ADMIN or RECEPTION.
+ */
 public class StaffUser extends ClinicUser {
     private int userId;
     private String username;

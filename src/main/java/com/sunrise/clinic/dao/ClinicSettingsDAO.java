@@ -20,7 +20,7 @@ public class ClinicSettingsDAO {
                 }
             }
         } catch (Exception ignored) {
-            // use 1500 if settings table missing
+            // Fall back to the default fee if MySQL is not available.
         }
         return new BigDecimal("1500.00");
     }

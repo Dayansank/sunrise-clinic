@@ -14,5 +14,4 @@ src/main/resources/db.local.properties
 src/main/resources/db.properties
 *.war
 .vscode/
-~$*
 

@@ -1,5 +1,8 @@
 package com.sunrise.clinic.pattern;
 
+/**
+ * Reception policy. Front desk can book, search and print bills, but not open reports.
+ */
 public class ReceptionAccessPolicy implements StaffAccessPolicy {
     @Override
     public boolean canRegisterAppointments() {

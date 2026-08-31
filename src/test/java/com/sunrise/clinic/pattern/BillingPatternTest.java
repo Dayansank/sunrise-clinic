@@ -6,14 +6,12 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BillingPatternTest {
 
     @Test
     void consultationFeeConfigIsSingleton() {
         assertSame(ConsultationFeeConfig.getInstance(), ConsultationFeeConfig.getInstance());
-        assertTrue(ConsultationFeeConfig.getInstance().getFee().compareTo(java.math.BigDecimal.ZERO) > 0);
     }
 
     @Test

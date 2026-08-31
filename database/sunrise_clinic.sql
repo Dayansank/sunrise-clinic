@@ -1,4 +1,4 @@
--- sunrise clinic mysql schema + sample data
+-- Sunrise Dental Clinic - MySQL schema, sample data, function, procedure, trigger
 CREATE DATABASE IF NOT EXISTS sunrise_clinic
     DEFAULT CHARACTER SET utf8mb4
     DEFAULT COLLATE utf8mb4_unicode_ci;

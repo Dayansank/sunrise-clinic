@@ -15,6 +15,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Creates bills. If a bill already exists we just return it instead of charging twice.
+ */
 public class BillingService {
     private final AppointmentDAO appointmentDAO;
     private final BillDAO billDAO;

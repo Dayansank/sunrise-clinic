@@ -15,6 +15,10 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+/**
+ * Security filter for every URL. Guests can only open the public pages.
+ * Patients stay in the patient area. Staff are split: reception desk vs admin office.
+ */
 @WebFilter("/*")
 public class AuthFilter implements Filter {
 
@@ -35,6 +39,15 @@ public class AuthFilter implements Filter {
         HttpSession session = http.getSession(false);
         StaffUser staff = session == null ? null : (StaffUser) session.getAttribute("staffUser");
         Patient patient = session == null ? null : (Patient) session.getAttribute("patientUser");
+
+        if (path.equals("/logout")) {
+            if (staff == null && patient == null) {
+                httpResponse.sendRedirect(http.getContextPath() + "/index.jsp");
+                return;
+            }
+            chain.doFilter(request, response);
+            return;
+        }
 
         if (path.startsWith("/qr")) {
             if (staff == null && patient == null) {

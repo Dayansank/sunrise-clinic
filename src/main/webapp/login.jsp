@@ -30,7 +30,8 @@
             <button type="submit" class="btn orange">Sign in</button>
         </form>
         <p class="hint">admin / Admin@123 · reports only<br>reception / Staff@123 · walk-in desk and bills</p>
-        <p class="hint"><a href="${pageContext.request.contextPath}/index.jsp">Back to Dental Unit</a></p>
+        <p class="hint"><a href="${pageContext.request.contextPath}/index.jsp">Home</a>
+            · <a href="${pageContext.request.contextPath}/patient-login">Patient portal</a></p>
     </section>
 </div>
 </div>
