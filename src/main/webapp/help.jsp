@@ -3,9 +3,9 @@
 <%@ include file="/WEB-INF/jspf/header.jspf" %>
 <section class="hero-panel">
     <div>
-        <p class="eyebrow">New staff guide</p>
-        <h1>Help</h1>
-        <p>Follow these steps to use the Sunrise Dental Clinic system.</p>
+        <p class="eyebrow">Help</p>
+        <h1>How to use it</h1>
+        <p>Short steps for the login you are using.</p>
     </div>
 </section>
 <ol class="help-list">

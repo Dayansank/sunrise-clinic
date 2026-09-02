@@ -13,9 +13,9 @@
 <div class="login-wrap">
 <div class="login-shell">
     <section class="login-hero">
-        <p class="eyebrow">Staff portal</p>
-        <h1>Channel the front desk</h1>
-        <p>Reception registers walk-in visits and prints bills. Admin opens reports and looks up records.</p>
+        <p class="eyebrow">Staff</p>
+        <h1>Staff login</h1>
+        <p>Reception books walk-ins and prints bills. Admin does reports and staff accounts.</p>
     </section>
     <section class="login-card">
         <h2>Staff login</h2>

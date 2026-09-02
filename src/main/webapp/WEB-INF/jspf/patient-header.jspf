@@ -11,8 +11,8 @@
 <body class="app-body">
 <div class="util-bar no-print">
     <div>
-        <span>Patient portal</span>
-        <span>Hotline <strong>+94 11 234 5678</strong></span>
+        <span>Logged in</span>
+        <span>Phone <strong>+94 11 234 5678</strong></span>
     </div>
     <div>12 Galle Road, Colombo 03</div>
 </div>

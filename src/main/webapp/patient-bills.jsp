@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/jspf/patient-header.jspf" %>
 <section class="hero-panel">
-    <p class="eyebrow">Accounts</p>
+    <p class="eyebrow">Bills</p>
     <h1>My bills</h1>
 </section>
 <section class="card">

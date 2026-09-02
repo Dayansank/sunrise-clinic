@@ -1,41 +1,38 @@
 # Sunrise Dental Clinic
 
-CIS6003 Advanced Programming coursework. This is a Java web system for a private dental clinic in Colombo.
+CIS6003 coursework. Java website for a dental clinic in Colombo.
 
-I built it with JSP + Servlets (Jakarta), MySQL and Tomcat 10. Patients can book online. Reception handles walk-in visits and bills. Admin looks after reports, staff accounts and the clinic catalogue.
+JSP + Servlets, MySQL, Tomcat 10. Patients book online. Reception does walk-in and bills. Admin does reports, staff and dentists/fees.
 
-## How to run it
+## Run it
 
 1. JDK 17
-2. MySQL 8 — import `database/sunrise_clinic.sql`
-3. Copy `src/main/resources/db.properties` and set your MySQL user/password
+2. MySQL 8 - import `database/sunrise_clinic.sql`
+3. Copy `src/main/resources/db.properties` and put your mysql password
 4. `mvn package`
-5. Deploy `target/sunrise-clinic.war` to Tomcat 10
-6. Open http://localhost:8080/sunrise-clinic
+5. Put `target/sunrise-clinic.war` on Tomcat 10
+6. http://localhost:8080/sunrise-clinic
 
-## Logins I used for testing
+## Logins I used
 
-- Admin: `admin` / `Admin@123`
-- Reception: `reception` / `Staff@123`
-- Demo patient: `kamal@sunrise.lk` / `Patient@123`
+- admin / Admin@123
+- reception / Staff@123
+- kamal@sunrise.lk / Patient@123
 
-## What is in the project
+## Notes
 
-- JSP → servlets/services → MySQL
-- REST under `/api/`
-- JUnit tests (`mvn test`)
+Admin and reception menus are different. If I change a dentist or the fee in MySQL it shows on the site after refresh.
 
-Admin and reception do **not** share the same menu. If I change dentists or the consultation fee in MySQL (or on the admin catalogue page), the website shows it after refresh.
+`mvn test` for JUnit.
 
-## Later extras (empty branches, not built yet)
+REST is under `/api/`.
 
-I left GitHub branches for work I might add after the assignment:
+## Later (empty branches, not coded)
 
-- `feature/future-sms-email` — real SMS/email, not only a log
-- `feature/future-password-reset` — forgot password
-- `feature/future-card-payment` — pay the bill by card
-- `feature/future-reminders` — remind the patient before the visit
-- `feature/future-report-pdf` — download reports as PDF
-- `feature/future-dentist-leave` — block a dentist who is on leave
-- `feature/future-treatment-notes` — dentist notes on a visit
-
+- `feature/future-sms-email` - real sms/email
+- `feature/future-password-reset`
+- `feature/future-card-payment`
+- `feature/future-reminders`
+- `feature/future-report-pdf`
+- `feature/future-dentist-leave`
+- `feature/future-treatment-notes`

@@ -2,13 +2,13 @@
     <div class="footer-grid">
         <div>
             <h4>Sunrise Dental Clinic</h4>
-            <p>Private dental unit in Colombo offering preventive, restorative and aesthetic care. Unique appointment numbers, live slots and printed bills.</p>
+            <p>Private dental clinic in Colombo 03. Book online or come to the desk.</p>
         </div>
         <div>
             <h4>Quick links</h4>
             <p><a href="${pageContext.request.contextPath}/patient-register.jsp">Book appointment</a></p>
             <p><a href="${pageContext.request.contextPath}/patient-login">Patient login</a></p>
-            <p><a href="${pageContext.request.contextPath}/login.jsp">Staff portal</a></p>
+            <p><a href="${pageContext.request.contextPath}/login.jsp">Staff login</a></p>
         </div>
         <div>
             <h4>Contact</h4>

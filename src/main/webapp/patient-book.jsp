@@ -2,9 +2,9 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/jspf/patient-header.jspf" %>
 <section class="hero-panel">
-    <p class="eyebrow">Channel a dentist</p>
-    <h1>Book your appointment</h1>
-    <p>Your name and contact are already on your account. Pick a dentist, a treatment, then a free slot.</p>
+    <p class="eyebrow">Booking</p>
+    <h1>Book appointment</h1>
+    <p>Pick dentist, treatment and a free time.</p>
 </section>
 <c:if test="${not empty error}"><div class="alert error">${error}</div></c:if>
 <c:if test="${not empty success}"><div class="alert success">${success}</div></c:if>

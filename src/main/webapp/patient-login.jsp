@@ -13,12 +13,12 @@
 <div class="login-wrap">
 <div class="login-shell">
     <section class="login-hero">
-        <p class="eyebrow">Patient portal</p>
-        <h1>Book your own visit</h1>
-        <p>Sign in to choose a dentist, pick a live time slot, and manage your appointments.</p>
+        <p class="eyebrow">Patients</p>
+        <h1>Patient login</h1>
+        <p>Use the email you registered with.</p>
     </section>
     <section class="login-card">
-        <h2>Welcome back</h2>
+        <h2>Login</h2>
         <c:if test="${not empty error}"><div class="alert error">${error}</div></c:if>
         <form class="form" method="post" action="${pageContext.request.contextPath}/patient-login">
             <label>Email

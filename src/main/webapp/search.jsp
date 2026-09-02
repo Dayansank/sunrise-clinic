@@ -5,7 +5,7 @@
     <div>
         <p class="eyebrow">Search</p>
         <h1>Display Appointment Details</h1>
-        <p>Enter the unique appointment number to view the full record.</p>
+        <p>Type the appointment number, like APT-2026-0001.</p>
     </div>
 </section>
 

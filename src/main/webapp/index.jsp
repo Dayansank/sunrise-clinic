@@ -15,21 +15,21 @@
     <div class="slides">
         <article class="slide is-active" style="background-image:url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1800&q=80')">
             <div class="slide-copy">
-                <p class="crumb">Home / Sunrise Dental / Colombo</p>
-                <p class="kicker">Private dental clinic</p>
-                <h1>Care that begins at sunrise.</h1>
-                <p class="lead">Preventive, restorative and aesthetic dentistry under one roof. Book online and collect a QR ticket for reception.</p>
+                <p class="crumb">Home</p>
+                <p class="kicker">Colombo 03</p>
+                <h1>Sunrise Dental Clinic</h1>
+                <p class="lead">Small private clinic. You can book online or just walk in at reception.</p>
                 <div class="portal-row">
                     <a class="btn orange" href="${pageContext.request.contextPath}/patient-register.jsp">Book appointment</a>
-                    <a class="btn ghost" href="${pageContext.request.contextPath}/patient-login">Channel as a patient</a>
+                    <a class="btn ghost" href="${pageContext.request.contextPath}/patient-login">Patient login</a>
                 </div>
             </div>
         </article>
         <article class="slide" style="background-image:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1800&q=80')">
             <div class="slide-copy">
-                <p class="kicker">Modern treatment rooms</p>
-                <h1>Gentle care with advanced equipment</h1>
-                <p class="lead">Fillings, root canal, whitening and orthodontic reviews by our dental team in Colombo.</p>
+                <p class="kicker">What we do</p>
+                <h1>Check-ups, fillings and cleaning</h1>
+                <p class="lead">Also root canal and whitening. Ask at the desk if you are not sure.</p>
                 <div class="portal-row">
                     <a class="btn orange" href="${pageContext.request.contextPath}/patient-register.jsp">Book appointment</a>
                     <a class="btn ghost" href="${pageContext.request.contextPath}/index.jsp#services">View services</a>
@@ -38,9 +38,9 @@
         </article>
         <article class="slide" style="background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1800&q=80')">
             <div class="slide-copy">
-                <p class="kicker">Patient portal</p>
-                <h1>Choose a live time slot</h1>
-                <p class="lead">Online booking blocks double-booking. Every visit gets a unique appointment number.</p>
+                <p class="kicker">Online booking</p>
+                <h1>Pick a free time</h1>
+                <p class="lead">Login, choose dentist and time. The system gives you a number like APT-2026-0001.</p>
                 <div class="portal-row">
                     <a class="btn orange" href="${pageContext.request.contextPath}/patient-login">Patient login</a>
                     <a class="btn ghost" href="${pageContext.request.contextPath}/login.jsp">Staff portal</a>
@@ -49,9 +49,9 @@
         </article>
         <article class="slide" style="background-image:url('https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1800&q=80')">
             <div class="slide-copy">
-                <p class="kicker">Visit us</p>
-                <h1>Colombo clinic, open six days</h1>
-                <p class="lead">Monday to Saturday, 09:00 – 17:00. 12 Galle Road, Colombo 03. Consultation LKR <%= ConsultationFeeConfig.getInstance().getFee() %>.</p>
+                <p class="kicker">Opening hours</p>
+                <h1>Mon to Sat, 9am to 5pm</h1>
+                <p class="lead">12 Galle Road, Colombo 03. Consultation fee LKR <%= ConsultationFeeConfig.getInstance().getFee() %>.</p>
                 <div class="portal-row">
                     <a class="btn orange" href="${pageContext.request.contextPath}/patient-register.jsp">Book appointment</a>
                     <a class="btn ghost" href="${pageContext.request.contextPath}/index.jsp#contact">Clinic hours</a>
@@ -68,10 +68,10 @@
 <section class="section light hours">
     <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80" alt="Dental treatment room">
     <div>
-        <p class="eyebrow">Our clinic</p>
-        <h2>Sunrise care in the heart of Colombo</h2>
-        <p>Sunrise Dental Clinic provides accurate diagnostics, gentle treatment and a multidisciplinary team. Patients can register online or walk in at reception. Every visit receives a unique appointment number.</p>
-        <p>Consultation fee LKR <%= ConsultationFeeConfig.getInstance().getFee() %>. Double-booking is blocked so two patients never share the same dentist and time.</p>
+        <p class="eyebrow">About</p>
+        <h2>About the clinic</h2>
+        <p>Sunrise Dental Clinic is in Colombo 03. New patients can make an account on this site. If you dont want to book online, reception can still add you at the desk.</p>
+        <p>Consultation is LKR <%= ConsultationFeeConfig.getInstance().getFee() %>. Two people cannot take the same dentist at the same time.</p>
     </div>
 </section>
 
@@ -80,62 +80,62 @@
     <div class="grid-3">
         <article class="service-card">
             <div class="icon-badge">01</div>
-            <h3>General check-up</h3>
-            <p>Routine examination, dental radiography support and a clear treatment plan.</p>
+            <h3>Check-up</h3>
+            <p>Normal exam. X-ray if the dentist needs it.</p>
         </article>
         <article class="service-card">
             <div class="icon-badge">02</div>
-            <h3>Cleaning &amp; polish</h3>
-            <p>Professional scaling and stain removal to keep gums and enamel healthy.</p>
+            <h3>Cleaning</h3>
+            <p>Scaling and polish.</p>
         </article>
         <article class="service-card">
             <div class="icon-badge">03</div>
-            <h3>Fillings &amp; restorations</h3>
-            <p>Tooth-coloured fillings and chair-side restorative care.</p>
+            <h3>Fillings</h3>
+            <p>White fillings for cavities.</p>
         </article>
         <article class="service-card">
             <div class="icon-badge">04</div>
             <h3>Root canal</h3>
-            <p>Endodontic treatment to save infected teeth with modern equipment.</p>
+            <p>If the tooth is infected we try to save it.</p>
         </article>
         <article class="service-card">
             <div class="icon-badge">05</div>
             <h3>Whitening</h3>
-            <p>In-clinic aesthetic whitening for a brighter, even smile.</p>
+            <p>Teeth whitening at the clinic.</p>
         </article>
         <article class="service-card">
             <div class="icon-badge">06</div>
-            <h3>Orthodontic review</h3>
-            <p>Alignment checks and referral pathways for braces and retainers.</p>
+            <h3>Braces check</h3>
+            <p>We look at alignment. For braces we send you to a specialist.</p>
         </article>
     </div>
 </section>
 
 <section class="section light" id="specialists">
-    <h2>How patients use the unit</h2>
+    <h2>How this website works</h2>
     <div class="grid-3">
         <article class="feature">
             <div class="icon-badge">A</div>
-            <h3>Online booking</h3>
-            <p>Create an account, pick a dentist and a live 30-minute slot. No phone wait.</p>
+            <h3>Book online</h3>
+            <p>Make an account, pick dentist and a free time.</p>
         </article>
         <article class="feature">
             <div class="icon-badge">B</div>
-            <h3>Personal records</h3>
-            <p>See visits, cancel a booked appointment, and view bills from your portal.</p>
+            <h3>Your visits</h3>
+            <p>After login you can see appointments, cancel one, and check bills.</p>
         </article>
         <article class="feature">
             <div class="icon-badge">C</div>
-            <h3>Walk-in desk</h3>
-            <p>Reception can register a patient, search by appointment number and print a bill.</p>
+            <h3>Reception</h3>
+            <p>Staff can add a walk-in, search the number and print the bill.</p>
         </article>
     </div>
 </section>
 
 <section class="cta-band">
     <div>
-        <h2>Need to channel a dentist?</h2>
-        <p>New patients register in minutes. Existing patients sign in and choose a free slot.</p>
+        <h2>Need an appointment?</h2>
+        <p>Register if you are new. Login if you already made an account.</p>
     </div>
     <a class="btn orange" href="${pageContext.request.contextPath}/patient-register.jsp">Book appointment</a>
 </section>

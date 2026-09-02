@@ -3,9 +3,9 @@
 <%@ include file="/WEB-INF/jspf/header.jspf" %>
 <section class="hero-panel">
     <div>
-        <p class="eyebrow">Live MySQL data</p>
-        <h1>Clinic catalogue</h1>
-        <p>Changes here are saved in the database and show on booking and billing pages immediately.</p>
+        <p class="eyebrow">Admin</p>
+        <h1>Dentists and fees</h1>
+        <p>If I change a dentist or the fee here, the booking page shows it after refresh.</p>
     </div>
 </section>
 

@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="util-bar no-print">
     <div>
-        <span>Emergency <strong>24/7</strong></span>
-        <span>Hotline <strong>+94 11 234 5678</strong></span>
+        <span>Open <strong>Mon–Sat 9am–5pm</strong></span>
+        <span>Phone <strong>+94 11 234 5678</strong></span>
     </div>
     <div>12 Galle Road, Colombo 03</div>
 </div>
@@ -11,14 +11,14 @@
         <span class="brand-mark">S</span>
         <div>
             <strong>Sunrise Dental Clinic</strong>
-            <small>Colombo · Est. for brighter smiles</small>
+            <small>Colombo 03</small>
         </div>
     </a>
     <nav class="nav">
         <a href="${pageContext.request.contextPath}/index.jsp">Home</a>
         <a href="${pageContext.request.contextPath}/index.jsp#services">Services</a>
-        <a href="${pageContext.request.contextPath}/index.jsp#specialists">Specialists</a>
-        <a href="${pageContext.request.contextPath}/patient-login">Patient portal</a>
+        <a href="${pageContext.request.contextPath}/index.jsp#specialists">How it works</a>
+        <a href="${pageContext.request.contextPath}/patient-login">Patient login</a>
         <a href="${pageContext.request.contextPath}/login.jsp">Staff</a>
         <a class="btn orange" href="${pageContext.request.contextPath}/patient-register.jsp">Book appointment</a>
     </nav>

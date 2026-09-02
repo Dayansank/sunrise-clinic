@@ -5,7 +5,7 @@
     <div>
         <p class="eyebrow">Walk-in desk</p>
         <h1>Register New Appointment</h1>
-        <p>All fields are required. The system creates the appointment number automatically.</p>
+        <p>Fill all the boxes. The number is made by MySQL, dont type it.</p>
     </div>
 </section>
 

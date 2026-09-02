@@ -5,13 +5,13 @@
 <section class="hero-panel">
     <div>
         <p class="eyebrow">${admin ? 'Admin portal' : 'Reception desk'}</p>
-        <h1>Good day, ${sessionScope.staffUser.fullName}</h1>
+        <h1>Hello, ${sessionScope.staffUser.fullName}</h1>
         <c:choose>
             <c:when test="${admin}">
-                <p>Reports, staff, catalogue and record lookup. Walk-in register and billing stay with reception.</p>
+                <p>Reports, staff users and the dentist list. Reception still does walk-ins and bills.</p>
             </c:when>
             <c:otherwise>
-                <p>Walk-in bookings, appointment search and printed bills. Reports stay with admin.</p>
+                <p>Register walk-in, search number, print bill.</p>
             </c:otherwise>
         </c:choose>
     </div>

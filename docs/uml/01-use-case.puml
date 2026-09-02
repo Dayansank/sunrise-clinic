@@ -76,4 +76,15 @@ note bottom of P
   Print is extra (browser Ctrl+P).
 end note
 
+note bottom of Q
+  Extend: QR only appears
+  when the appointment is found.
+end note
+
+note bottom of D
+  Extend: reports already open
+  for today. Picking another
+  date is optional.
+end note
+
 @enduml

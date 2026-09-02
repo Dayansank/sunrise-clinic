@@ -13,10 +13,10 @@ database "MySQL" as DB
 
 Rec -> S : enter appointment number
 activate S
-S -> BS : createBill(SCN-0007)
+S -> BS : createBill(APT-2026-0001)
 activate BS
 
-BS -> ADAO : findByNumber(SCN-0007)
+BS -> ADAO : findByNumber(APT-2026-0001)
 ADAO -> DB : SELECT appointment
 DB --> ADAO : appointment + treatment cost
 ADAO --> BS : appointment

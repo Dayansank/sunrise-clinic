@@ -14,8 +14,8 @@
 <div class="login-shell">
     <section class="login-hero">
         <p class="eyebrow">New patient</p>
-        <h1>Register with the Dental Unit</h1>
-        <p>Your details stay in one place. Book online, cancel a visit, and view bills whenever you need.</p>
+        <h1>Create account</h1>
+        <p>Fill this if you want to book from the website.</p>
     </section>
     <section class="login-card">
         <h2>Create your account</h2>

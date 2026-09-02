@@ -3,23 +3,23 @@
 <%@ include file="/WEB-INF/jspf/header.jspf" %>
 <section class="hero-panel">
     <div>
-        <p class="eyebrow">Decision support</p>
-        <h1>Clinic Reports</h1>
-        <p>Today’s bookings and income by dentist.</p>
+        <p class="eyebrow">Admin</p>
+        <h1>Reports</h1>
+        <p>Today's bookings and income.</p>
     </div>
 </section>
 
 <section class="chart-grid">
     <article class="card">
-        <h3>Status mix · doughnut</h3>
+        <h3>By status</h3>
         <canvas id="statusChart"></canvas>
     </article>
     <article class="card">
-        <h3>Income by dentist · bar</h3>
+        <h3>Income by dentist</h3>
         <canvas id="incomeChart"></canvas>
     </article>
     <article class="card">
-        <h3>Visits last 7 days · line</h3>
+        <h3>Last 7 days</h3>
         <canvas id="weeklyChart"></canvas>
     </article>
 </section>

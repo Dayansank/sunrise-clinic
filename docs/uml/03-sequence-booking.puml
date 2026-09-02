@@ -30,7 +30,7 @@ DB --> DAO : free or taken
 DAO --> T : slot free
 
 T -> DAO : nextAppointmentNumber()
-DAO --> T : SCN-0007
+DAO --> T : APT-2026-0001
 T -> DAO : insert appointment
 DAO -> DB : INSERT appointments
 DB --> DAO : saved
@@ -47,8 +47,8 @@ S --> Rec : show appointment number
 deactivate S
 
 note over Rec, DB
-  I used the same steps for patient online booking.
-  Only createdBy / bookedBy is different.
+  Patient online booking uses the same steps.
+  Only createdBy and bookedBy are different.
 end note
 
 @enduml

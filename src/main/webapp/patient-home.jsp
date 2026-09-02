@@ -2,9 +2,9 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/jspf/patient-header.jspf" %>
 <section class="hero-panel">
-    <p class="eyebrow">Patient portal</p>
+    <p class="eyebrow">Patient</p>
     <h1>Hello, ${sessionScope.patientUser.name}</h1>
-    <p>Book a visit in a few steps. Live slots keep two people from taking the same dentist at the same time.</p>
+    <p>Book a time, see your visits or check a bill.</p>
 </section>
 <div class="stat-row">
     <div class="stat"><span>Portal</span><strong>Online booking</strong></div>
